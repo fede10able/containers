@@ -1,0 +1,25 @@
+// Uses Declarative syntax to run commands inside a container.
+pipeline {
+    agent {
+        kubernetes {
+            yamlFile 'container.yaml'
+            // Can also wrap individual steps:
+            // container('shell') {
+            //     sh 'hostname'
+            // }
+            defaultContainer 'shell'
+        }
+    }
+    stages {
+        stage('Main') {
+            steps {
+                container('shell') {
+                    sh 'uname -a'
+            }
+            steps {
+                container('shell') {
+                    sh 'ls -r -a'
+            }
+        }
+    }
+}
