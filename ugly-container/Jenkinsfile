@@ -13,13 +13,14 @@ pipeline {
     stages {
         stage('Main') {
             steps {
-                container('shell') {
-                    sh 'uname -a'
+                step{ 
+                    container('shell') {
+                        sh 'uname -a'
+                    }
                 }
-            }
-            steps {
-                container('shell') {
-                    sh 'ls -r -a'
+                step {
+                    container('shell') {
+                        sh 'ls -r -a'
                 }
             }
         }
