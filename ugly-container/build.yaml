@@ -6,5 +6,4 @@ phases:
 
   build:
     commands:
-      - cd ${BUILD_PATH}
       - ls -l 
