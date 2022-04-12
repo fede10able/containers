@@ -3,7 +3,7 @@ version: 0.2
 
 
 phases:
-  pre-build:
+  pre_build:
     commands:
       - set IMAGE_TAG=`date +%s`
 
