@@ -5,7 +5,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - set IMAGE_TAG=`date +%s`
+      - export IMAGE_TAG=`date +%s`
 
   build:
     commands:
